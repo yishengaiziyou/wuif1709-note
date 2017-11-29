@@ -1,0 +1,613 @@
+<h1>JS组成</h1>
+一、 网页的组成(3部分)<br>
+      1、结构层(html)<br>
+      2、表现层(css)<br>
+      3、行为层(JS)<br>
+二、程序？<br>
+      炒菜的过程是流程，把炒菜的过程写成菜谱是程序，记录炒菜的过程就是编程。<br>
+        流程 <br>
+        需求<br>
+        程序<br>
+        编程<br>
+    程序是什么？<br>
+	    为了实现某个功能或者某个目的，通过计算机语言写的指令序列的集合。<br>
+三、JavaScript与Java的关系<br>
+两者公司不同：java-sun  JS-网景公司<br>
+语言：java是强类型的语言  JS是弱类型的语言<br>
+java是纯面向对象的(封装、继承、多态)  <br>
+JS是基于对象(内置对象：日期，数组...)<br>
+执行方法：java是编译类型的；JS是解释型的<br>
+四、JS的作用<br>
+1、实现动效<br>
+2、数据验证<br>
+3、操作html/css<br>
+4、制作游戏()<br>
+5、单页面应用(谷歌在线的word、excel等编辑器；各大平台的云)<br>
+6、服务器端的应用(node.js)<br>
+7、cookie<br>
+五、JS是什么？<br>
+JS是一个脚本语言(可以直接在浏览器中解析执行，无需编译)。<br>
+JS是基于对象和事件驱动的解释型的松散型语言。<br>
+JS是基于对象的。<br>
+事件驱动：对浏览器和用户的行为进行响应<br>
+1、解释型<br>
+2、松散型(弱类型)<br>
+六、JS语言
+1、 如何执行？<br>
+2、 html如何引入JS？<br>
+1)引入外部文件  <br> 
+**注意** ：引入外部文件的时候，不能在标签中间写入内容<br>
+2)嵌入式 <br>  
+在超链接或者重定向中写入<br>
+3)超链接<br>   
+超链接的表现形式(4种)：<br>
+1.普通链接<br>
+<a href="http://www.sxuek.com">山西优逸客</a><br>
+2.写入js代码，会屏蔽href属性<br>
+<a href="javascript:alert(1)">超链接</a><br>
+<a href="javascript:void(0)">超链接</a><br>
+3.资源下载，默认只能是压缩过的文件<br>
+<a href="1.zip"></a><br>
+4.空链接，实现的是返回页面顶部<br>
+<a href=""></a><br>
+4)在事件之后调用<br>
+<div onclick="alert(1)"></div><br>
+**注意：** 多个script块之间会相互影响<br>
+七、JS如何输出？<br>
+1、alert();  
+    在页面中弹出一个框。<br>
+		注意：alert会阻止后面代码的执行<br>
+	2、console.log();<br>
+		将数据内容输出至控制台<br>
+	3、document.write()<br>
+		将数据内容输出至页面中<br>
+		注意：识别标签和行内样式<br>
+	4、confirm()<br>
+		在页面中弹出一个带确定和取消按钮的弹出框<br>
+	5、prompt('请输入你的姓名');<br>
+		页面中弹出一个带提示信息和输入框的弹出框<br>
+<h1> 变量</h1><br>
+一、命名规范：<br>
+1、变量名必须以字母、下划线 _ 或 \$ 开头，后面部分可以跟任意的字母、数字、_ 、或 $<br>
+2、不能使用关键字(JS自定义的 var)或者是保留字(为以后扩展用)命名<br>
+3、JavaScript有自己的命名习惯<br>
+​	* 驼峰命名法：getElementById<br>
+​	* 首字母大写法：Object<br>
+4、变量名区分大小写<br>
+5、命名一定要有意义，提高代码可读性<br>
+二、什么是变量？<br>
+变量就是保存数据的容器。	<br>
+内存就是一个盒子，每次声明一个变量，它都会在内存中开辟一段空间进行保存。保存起来后，当我们需要用的时候会从内存中获取相应的数据。如果浏览器关闭，内存会释放空间，方便下次使用。<br>
+三、变量声明(通过关键字)	<br>
+1、var <br>
+2、et (es6)<br>
+  * let的用法类似于var<br>
+  * let不存在变量提升现象<br>
+  * let不能重新声明，报错该变量已经存在<br>
+  * let存在块级作用域(Es6)<br>
+3、const (es6)<br>
+  * const声明的是一个常量<br>
+  * const只能声明的同时进行赋值<br>
+  * const也不存在变量提升现象<br>
+  * const不能重新声明，报错该变量已存在<br>
+四、变量的赋值情况<br>
+	1. 声明变量的同时进行赋值<br>
+	2. 声明变量之后赋值<br>
+	3. 声明多个变量并同时进行赋值<br>
+		  注意：多个变量之间用逗号隔开<br>
+	4.  声明多个变量，之后赋值<br>
+五、注意：<br>
+	1. 变量声明之前进行调用，会返回undefined(未赋值)。【变量提升现象】<br>
+	2. 不通过关键字声明的变量，但是赋值了，它会返回对应的值(全局变量)<br>
+	3. 不通过关键字声明的变量，但是没有赋值，会报错。<br>
+	4. 对变量重新声明赋值，会发生覆盖。<br>
+六、数据类型<br>
+  能够表达或者操作值的类型，称为数据类型
+1. 为何要划分数据类型？
+  需求
+  在内存中存储的位置不一样
+2. 数据类型（两大类）
+   *** 初始类型(存放在栈区，内存比较小，访问速度快)<br>
+     * undefined<br>
+     可能的情况：声明变量并未赋值，返回undefined;<br>
+     声明变量之前进行访问，返回undefined。<br>
+     返回的值：undefined<br>
+     * null (空，占位符)<br>
+     可能的值：null<br>
+     返回的值：null<br>
+     返回值的类型：object<br>
+     * number(数值类型)<br>
+     可能的值：整型、浮点型、二进制、十进制、八进制、十六进制、科学			计数法(最大值，最小值)<br>
+     返回的值：对应的数值<br>
+     返回值的类型：number<br>
+     * string (字符串类型)<br>
+     可能的值：通过引号引起来的<br>
+     返回的值：对应的字符串<br>
+     返回值的类型：string<br>
+     * boolean (布尔类型)<br>
+     可能的值：true  false<br>
+     返回的值：true  false<br>
+     返回值的类型：boolean<br>
+     * symbol (es6)<br>
+*** 引用类型（存放在堆区，内存较大，访问速度慢）<br>
+  object(数组，函数...)<br>
+<h1>运算符</h1><br>
+1.  算术运算符<br>
+（+、-、*、/、%、++、--）<br>
++: <br>
+  * 进行加法运算<br>
+    * 如果两个操作数都是number，最终得到number的值<br>
+    * 如果其中一个操作数是undefined，最终得到NaN(not a number，是number类型的一个状态)<br>
+    * 如果其中一个操作数是null，最终得到number的值<br>
+    * 如果其中一个操作数是boolean，会转换成对应的值进行计算<br>
+  * 字符串连接<br>
+  	* 如果操作数有一个是string或者都是string类型的会进行字符串链接<br>
+- :<br>
+  * 如果两个操作数都是number，最终得到number的值<br>
+  * 如果其中一个操作数是undefined，最终得到NaN<br><br>
+  * 如果其中一个操作数是null，最终得到number的值<br><br>
+  * 如果其中一个操作数是boolean，会转换成对应的值进行计算<br><br>
+  * 如果其中一个操作数是string<br>
+    * 数值 ： 隐式转换<br>
+    * 字母 ：NaN<br>
+  * 如果两个操作数都是string，得到NaN	<br>
+2. 关系运算符· <br>
+（>、<、>=、<=、==、===（全等）、！=、！==（不全等））<br>
+(1)、操作数都是数字,正数大于负数<br>
+(2)、两个操作数都是字符串，按照ASCII码表进行比较,如果首字符大则后面不需要比较;如果首字符大小一样,<br>则比较第二个字符的ASCII码值，依次类推。<br>
+(3)、数字与布尔值进行比较,隐式转换,true-1  false-0<br>
+(4)、数字和字符串进行比较,首先把字符串试图转换为数字,如果转换成功则进行比较,如果转换不成功，返回false<br>
+(5)、 alert(0==undefined)	    false<br>
+      alert(0==null)			 false<br>
+      alert(1==true)			 true<br>
+      alert(1===true)			 false<br>
+      alert(1=="true")			 false<br>
+      alert(undefined==null)	 false<br>
+3. 赋值运算符<br>
+ (= += -= *= /= %=)<br>
+4. 逻辑运算符<br>
+(&& 与      || 或     !非)<br>
+数字0、false、undefined、null、NaN、空字符串都为false<br>
+逻辑与 &&   同真为真，其余全为假<br>
+如果第一个操作数为假，发生短路原则，对第二个数不会进行操作，并返回假值<br>
+<br>
+| num1  | num2  | result | 结果   |<br>
+| ----- | ----- | ------ | ---- |<br>
+| true  | true  | true   | num2 |<br>
+| true  | false | false  | num2 |<br>
+| false | true  | false  | num1 |<br>
+| false | false | false  | num1 |<br>
+* 逻辑或  ||  同假为假，其余全为真<br>
+如果第一个操作数为真，发生短路原则，对第二个数不会进行操作，并返回真值<br>
+| num1  | num2  | result | 结果   |<br>
+| ----- | ----- | ------ | ---- |<br>
+| true  | true  | true   | num1 |<br>
+| true  | false | true   | num1 |<br>
+| false | true  | true   | num2 |<br>
+| false | false | false  | num2 |<br>
+5.其它运算符<br>
+	1)、一元运算符<br>
+	new<br>
+	  typeof<br>
+	  ++ --<br>
+	  +(正号) -(负号)<br>
+	  delete (删除一个对象)<br>
+	2)、三元运算符<br>
+		条件表达式?为真的值:为假的值<br>
+6. 特殊运算符 ()<br>
+	作用：提高优先级<br>
+7. 模板字符串 (es6)<br>
+	作用：方便引入变量<br>
+	模板字符串要用反引号引起来，如果需要引入变量通过${变量名}<br>
+	eg：console.log(`这是num1 -- ${num1}和num2 -- ${num2}的和${sum}`);<br>
+<h1>流程控制</h1><br>
+一、流程<br>
+   程序代码的执行顺序<br>
+   注意:JS的执行是根据浏览器的解析从上到下,一条语句一条语句的执行,有且只有这一种方式。<br>
+  二、流程控制<br>
+     通过规定的语句让程序代码有条件的按照一定的方式执行。<br>
+  三、表达式<br>
+     表达式一般由运算符和操作数构成,且有一定的值。(已经有值或者即将赋值)<br>
+<script><br>
+  var a = 3;<br>
+  var b = 2 * 4;<br>
+  var c = a;<br>
+  var d;<br>
+  d = 30;<br>
+</script><br>
+  四.语句<br>
+     以;为标识的为一条语句。<br>
+* 声明语句(声明一个变量.数组......)<br>
+  * 赋值语句(对变量进行赋值)<br>
+    * if语句,switch语句,for语句等等<br>
+<br>
+<h1>三大流程控制</h1><br>
+<br>
+       1.顺序结构<br>
+          是程序中最基本的流程控制,默认从上到下,一条语句一条语句执行。<br>
+       2.选择结构<br>
+    <br>
+        * 分支结构<br>
+          if(条件){执行的语句}<br>
+          if(){}else{}<br>
+          if(){}else if(){}else{}<br>
+            var date = prompt('请输入日期');<br>
+          if (date >= '6' && date <= '7') {<br>
+            alert('明天不用上课');<br>
+          }else if(date >'0' && date < '6'){<br>
+            alert('明天上课');<br>
+          }else{<br>
+            alert('日期输入有误');<br>
+          }<br>
+          注意:条件可以是表达式也可以是任何数据类型。<br>
+        * 条件结构<br>
+             switch(表达式){<br>
+              case 条件1:条件1成立执行的语句;<br>
+              break;<br>
+              case 条件2:条件2成立执行的语句;<br>
+              break;<br>
+              ......<br>
+              default:条件都不满足执行的语句;<br>
+             }<br>
+             switch语句不会转换类型。<br>
+             var date = prompt('请输入日期');<br>
+             switch(date){<br>
+              case'1':alert('周一');<br>
+          break;<br>
+          case'2':alert('周二');<br>
+          break;<br>
+          case'3':alert('周三');<br>
+          break;<br>
+          default:alert('有误');<br>
+             }<br>
+          3.循环结构<br>
+          当在条件满足的时候,需要重复的执行一段代码。<br>
+          1.for(初始化变量;条件表达式;步操作;){<br>
+            执行的语句;<br>
+          }<br>
+          2.while语句<br>
+            while(条件表达式){要执行的语句:}<br>
+          3.do while语句<br>
+            do{<br>
+          <br>
+            }while()<br>
+          <br>
+            总结:<br>
+            while和do while的区别：<br>
+            while：满足条件才执行循环。<br>
+            do while：先执行一次循环体，再进行判断。<br>
+          <br>
+            for和while<br>
+            * 循环次数确定时用for<br>
+            * 循环次数不确定时用while<br>
+            <br>
+            终止语句:<br>
+            * break:跳出整个循环(每次只能跳一层)<br>
+            * continue:跳出本层循环<br>
+            注意:最好用适当的语句去代替continue语句。<br>
+            * 一次跳出多层循环，在要跳出的那层循环前面加一个标记，比如：“out”,那么终止语句就是“break <br>out;”。<br>
+<h1>数组</h1><br>
+              * 一.数组<br>
+                 变量：储存数据的容器<br>
+                 数组：储存一组或者一系列相关数据的容器<br>
+              * 二.优势<br>
+                 * 方便对数据进行管理<br>
+                 * 可以保存大批量的数据<br>
+              * 三.创建方式<br>
+                 1.json格式<br>
+                  var arr = [];<br>
+                 2.通过实例化对象的方式<br>
+                  var arr = new Array()<br>
+              * 四.赋值情况<br>
+                1.声明的同时进行赋值<br>
+                  var arr = [34,65，577，978，'SAS','er'];<br>
+                2.声明之后进行赋值<br>
+                  var arr1 = []<br>
+                  arr1[0] = 34;<br>
+                  arr1[1] 65;<br>
+              * 五.对数组的访问<br>
+                 以下标的形式进行访问<br>
+                 * length属性：统计数组的长度。<br>
+                 * 访问数组的第一个元素：arr[0]。<br>
+                 * 访问数组的最后一个元素：arr[arr.length-1]。<br>
+                   注意：通过下标访问数组时，需要注意下标是0开始的，0表示数组的第一个  ，最后一个元素可以用arr.length-1表示。如果下标的范围超过数组长度，那么会输出undefined。<br>
+              * 六.对数组的遍历(操作)<br>
+                 * for<br>
+                    for(初始化值;条件表达式;步操作){<br>
+                      执行的的语句;<br>
+                    }<br>
+                 * for in(Es6)【一般用于数组和对象的遍历】<br>
+                    for(变量 in 对象){<br>
+                      执行的的语句;<br>
+                    }<br>
+                    fon in最终遍历出来的是对象的属性。<br>
+                 注意：<br>
+                  * 数组默认的值为空【变量默认值为undefined】。<br>
+                  * 数组的长度是可变的。<br>
+                  * 数组可以保存任何类型的数据。<br>
+                  * 数组下标是从0开始。<br>
+              * 七.二维数组：每个数组元素的值对应的又是一个数组<br>
+                * 二维数组的访问的方式：<br>
+                  通过双下标<br>
+                * 二维数组的遍历：<br>
+                  双层for循环<br>
+                * 浅拷贝：<br>
+                  传的是数组地址,会改变。指向的是赋值对象的引用。<br>
+                * 深拷贝：传的是数组的值,不会改变。指向的是赋值对象所有引用对象的全部赋值。<br>
+<h1>函数</h1>
+    一、函数<br>
+      函数就是将能够实现某一个特定功能的代码块封装起来，方便重复调用。<br>
+    二、特点：<br>
+      程序会更加简洁，维护起来会更容易。<br>
+    三、函数声明(三种方式)<br>
+        1、通过关键字<br>
+           fuction 函数名([参数1],[参数2],[参数3]){<br>
+            函数体(alert(1)/document.write);<br>
+           }<br>
+        2、通过字面量的方式<br>
+           var 变量名 = function([参数1],[参数2],[参数3]){<br>
+            函数体<br>
+           }<br>
+        3、通过实例化对象的方式<br>
+           var 变量名 = new function();<br>
+    四、函数调用<br>
+        1、函数名/变量名 + ()<br>
+           al();<br>
+           function al(){<br>
+            alert(1);<br>
+           }<br>
+        2、函数自调用<br>
+       注意:函数自调用的时候,无论之前是什么,必须加分号;<br>
+           (function al(){<br>
+            alert(1);<br>
+           })();   <br>
+      3、在事件之后调用<br>
+         只需要写函数名<br>
+         var al = document.querySelector('div');<br>
+         div onclick = al;<br>
+    五、注意<br>
+* 函数名重复会发生覆盖<br>
+      * 通过关键字声明的函数,可以在声明之前进行访问;通过字面量声明的函数只有在解析到它的时候,  <br>才会进行赋值。<br>
+      * 代码从上到下一条语句一条语句解析执行,多个script块之间由于解析环境一样, <br>他们之间是相互影响。调用不同块之间函数需要注意一定要先声明再调用。<br>
+    六、参数<br>
+      形参:声明函数时()里传的参数。<br>
+      实参:调用函数时()里传的参数。；。<br>
+    七、有关参数的个数<br>
+      * 实参和形参一一对应<br>
+      * 实参个数 < 形参:多余的形参返回undefined<br>
+      * 实参个数 > 形参:只返回形参相对应的值。<br>
+    八、多余实参的接收<br>
+      1、reset参数<br>
+         reset接收剩余参数的时候,作为一个数组进行处理。<br>
+         注意:...reset是运算符<br>
+         例如:function al(num,num1,...reset){<br>
+          console.log(num,num1,reset);<br>
+         };<br>
+      2、arguments对象<br>
+         当我们创建一个函数时,它默认会创建一个arguments对象。<br>
+         在arguments对象身上,保存了所有参数的信息。<br>
+         arguments.callee 指向函数自身<br>
+    九、默认参数<br>
+      1、直接在形参后面进行设置<br>
+         注意:默认参数位置一定放在最后,不然默认参数会一一对应进行覆盖。<br>
+          function al(num=29,num1,...reset){<br>
+          console.log([num,num1,arguments[2],arguments[3],arguments[4]]);<br>
+        }<br>
+        al(1,2,3,'sos','ntn');<br>
+      2、通过三元运算符<br>
+         条件表达式？为真的值:为假的值<br>
+      function al(num){<br>
+        num = num ===undefined?20:num;<br>
+        console.log(num);<br>
+      }<br>
+      al();<br>
+    3、逻辑或||<br>
+        function al(num){<br>
+        num = num || 30;<br>
+        console.log(num);<br>
+      }<br>
+      al('sas');<br>
+    十、函数返回值<br>
+      return<br>
+      * 在函数调用的地方，返回一个值<br>
+        注意：如果return后没有值，返回undefined。<br>
+              return只能返回一个值,如果在return后跟多个值，会发生覆盖，最终返回最后一个值。<br>
+      * 终止函数执行，terutn之后的语句都将不再执行。<br>
+        一个函数里可以有多个return语句，但只执行最后一条。<br>
+  十一、作用域<br>
+      环境：<br>
+           宿主环境：浏览器<br>
+           执行环境：决定了变量和函数的访问权限<br>
+                    * 全局环境<br>
+                    * 函数环境<br>
+      作用域：有关变量和函数的访问范围。<br>
+      作用域中分全局作用域和局部作用域。<br>
+      全局作用域：在任何地方都可以访问的变量。<br>
+                * 在函数之外声明的变量<br>
+                * 没有通过关键字声明的变量，并且同时赋值<br>
+                * window对象,window.name，window.top<br>
+      局部作用域：在规定的代码块内能够访问的变量<br>
+      块级作用域{}：es6 if switch for<br>
+      作用域链：作用域链的存在造成了闭包函数的产生<br>
+  十二、闭包函数<br>
+      闭包函数：在函数中存在作用域链，函数中的变量全部保存在对应的作用域中，这样的特效，我们称为闭包。<br>
+      闭包函数作用： 保存局部变量;<br>
+                    在函数外部访问局部变量。<br>
+  十三、回调函数<br>
+       把一个函数的指针(直接写函数名)作为参数传递给另一个函数，这个函数就叫回调函数。<br>
+<br>
+       传参方式：<br>
+       1、通过函数的指针<br>
+       2、吧整个函数传进去<br>
+  十四、递归函数<br>
+        在函数内部直接调用自己或间接调用自己。<br>
+  十五、函数重载<br>
+        * 同一个函数因为传入的参数的类型或个数不同，可以对应多个函数的实现，而且没中实现对应一个函数体<br>
+        * 重载函数常来实现功能类似二而所处理的数据类型不同的问题。<br>
+  十六、预解析顺序<br>
+        1、按照script块来解析，有多个script对时，按块解析，先解析第一个script中的代码<br>
+        2、按环境解析<br>
+        3、遇到关键字var和function时(即以关键字创建的函数)，提前解析到内存中(相对应的环境里)  <br>。即可在声明前调用<br>
+        4、若还有script，再按照上面的顺序进行解析。<br>
+  十七、内置顶层函数<br>
+        内置：ECMAScript<br>
+        顶层：页面中任何地方都可以调用<br>
+        1、escape();对字符串进行编码<br>
+        对非字母、数字、特殊标点符号(@ + - . / * 。) <br>的字符串进行编码，最终得到十六进制的转义序列，也就是将机器不识别的<br>
+        编码方式编译成机器可以识别的。<br>
+        2、unescape(str);对编码的字符串解码<br>
+        有关数据类型转换的;<br>
+            1、Number();将任何数据类型转换为数值类型<br>
+                如果是布尔值，true为1，false为0；<br>
+                如果是数值，转换为本身，会将毫无意义的后导零与前导零去掉；<br>
+                如果是null，转换为0；、<br>
+                如果是undefined，转换为NaN not a number;<br>
+                如果是字符串：<br>
+                    如果字符串中只有数字，则转换为数字(10进制)会忽略前导零和后导零;<br>
+                    如果是规范的浮点数，则转换为浮点数，会忽略前导零和后导零；<br>
+                    如果是空字符串或者为空，转换为0；<br>
+                    如果是其他值，转换为NaN。<br>
+            2、parselnt;将任何数据转换为整数<br>
+                如果一个字符串中只包含数字，转换为十进制数；<br>
+                如果有多个空格，会先找到第一个非空的值进行转换，直到非数值时结束；<br>
+                如果第一个数值不是以数字、空格开头的，一定转换为NaN；<br>
+                有两个参数时，第一个参数表示要转换的值，第二个参数表示几进制，返回值是一个十进制的数字：<br>
+                注意：第一个参数从最高位开始计算，只要有一位数可以识别为第二个参数传入的进制，则可以实现转 换，<br>
+                注意：第二个参数可以传入的值为2-36。<br>
+            3、parseFloat()：将任何数据类型转换为浮点数并返回<br>
+                只有一个点起作用，其他无效;<br>
+                如果字符串是一个有效的整数，他返回的是整数，不会返回浮点数。<br>
+            4、String();将任何数据类型转换为字符串<br>
+                如果是null，undefined，转换为字符串“null”“undefined”;<br>
+                如果是数值类型，转换为本身的字符串，123转换为“123”;<br>
+                如果是布尔类型，true为“true”false为“false”。<br>
+            5、Boolean();吧任何数据类型转换为布尔型<br>
+                转换为假：“”(空串)，null，undefined，0，false，NaN;<br>
+                其他都为真。<br>
+            6、isNaN();<br>
+                判断一个数据能否转换为数值；<br>
+                如果能转换成数值返回假，不能返回真。<br>
+            7、eval();<br>
+                将符合js语法规范的字符串转换成javascript命令执行(必须在一行)<br>
+            8、toString();<br>
+                将对象以字符串的方式来表达，都是通过对象的方式来调用的<br>
+                    格式：对象.toString<br>
+                    * 数组 分割的字符串<br>
+                    * 布尔<br>
+                    * 字符串(还是本身)<br>
+                    * 数值类型<br>
+                    * null与undefined没有toString()方法<br>
+<br>
+<h1>对象</h1><br>
+        * 面向过程：按照流程一步一步进行操作。<br>
+<br>
+* 面向对象：不管你中间环节具体实现，只要结果。<br>
+<br>
+* 一、对象：一切皆对象：对象指的就是人们所能接触到的所有的事物，有抽象的，也有具体的。<br>
+<br>
+    对象是属性和行为的集合。<br>
+      属性：描述对象特征的数据。<br>
+      行为：操作<br>
+<br>
+    类：具有相同属性和行为的对象的抽象。<br>
+        类是对象的抽象：<br>
+        对象是类的实例化：                                                                  <br>
+  抽象：<br>
+<br>
+  具体：<br>
+<br>
+* 二、声明一个对象<br>
+    1、实例化：var person = new Object();<br>
+    2、字面量：var person = {};<br>
+    3、构造函数：function Person(){<br>
+<br>
+    };首字母大写<br>
+    var lisi = new Object();<br>
+    lisi.name = '李四';<br>
+    lisi.age = 20;<br>
+    lisi.sex = '男';<br>
+    lisi.say = function(){<br>
+      alert('会说话');<br>
+    };<br>
+    console.log(lisi);<br>
+<br>
+* 三、添加属性、方法<br>
+    属性：对象.属性名 = 属性值<br>
+        对象['属性名'] = 属性值<br>
+    方法：对象.方法名 = function(){}<br>
+        对象['方法名'] = function(){}<br>
+<br>
+* 四、访问属性、方法<br>
+    属性：对象.属性名<br>
+        对象['属性名'];<br>
+    方法：对象.方法名<br>
+        对象['方法名'];<br>
+<br>
+* 五、删除属性、方法<br>
+    delete<br>
+    delete baba.age;<br>
+<br>
+* 六、清空对象<br>
+    null<br>
+    baba = null;<br>
+<br>
+* 七、for in<br>
+      对象： i-> 属性名/方法名<br>
+           对象名[i] -> 属性值/方法<br>
+      数组： i-> 下标<br>
+           数组名[i] -> 数组元素<br>
+<h1>对象的封装</h1><br>
+  将对象的所有组成部分全部组合起来,并对部分细节进行隐蔽,使其受到保护,只留下和外界的借口,和外界进行交流。<br>
+* 1、工厂函数(普通函数):不推荐、方便维护、节省内存、但是代码不规范。<br>
+  function myPhone(color){<br>
+    var phone = {};<br>
+    phone.color = color;<br>
+    phone.size = 375;<br>
+    phone.cai = '塑料';<br>
+    phone.say = function(){<br>
+      alert('打电话');<br>
+    }<br>
+    return phone;   <br>
+  }<br>
+  myPhone();<br>
+  var iphone = myPhone('red');<br>
+  console.log(iphone);<br>
+  let iphone2 = myPhone('green');<br>
+  console.log(iphone2);<br>
+* 2、构造函数：造成内存的浪费<br>
+* 3、原型函数：保存在代码块<br>
+   原型也是一个对象。在js中,每一个对象都会继承另一个对象所有的属性和方法,被继承的这个对象就是原型。<br>
+  * 1、对象：[[prototype]]<br>
+         [[prototype]]是对象内部的一个属性,但是我们不能直接访问。FF和Chrome提供了'poto'访问器,<br>ECM提供了Object.getPrototype(Object)访问器。<br>
+  * 2、函数：每个函数都有一个prototype属性,指向该对象的原型。<br>
+       prototype保存的是该函数的原型对象。<br>
+     当一个函数作为构造函数来使用时,<br>他会把该函数的prototype属性作为原型值赋值给所有通过该构造函数实例化的对象的原型。<br>
+         function An(name,weight){<br>
+           this.name = name;<br>
+           this.weight = weight;<br>
+           this.sing = function(){<br>
+             document.write('000');<br>
+           }<br>
+         }<br>
+         var green = new An('xiao',40);<br>
+         console.log(green);<br>
+         console.log(green.__proto__);<br>
+  * 3、原型对象：每个原型对象都有一个constructor,指向的是实例的构造函数。<br>
+     对象身上没有constructor属性,会去原型链上面去找,找对象的原型对象。<br>
+<br>
+     函数对象和原型对象通过prototype和constructor实现相互关联。<br>
+<br>
+     通过prototype可以实现代码共享,实现继承。<br>
+<br>
+     Object和Function都是构造函数<br>
+     Object的原型是null。<br>
+     Function的原型是function。<br>
+<br>
+  * 4、构造函数结合原型函数<br>
+     构造函数中一般放属性<br>
+     原型中一般放方法<br>
+
+
+
+
+

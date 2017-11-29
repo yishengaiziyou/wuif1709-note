@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
+<script>
+    // 数组去空
+    // var arr=[1,2,3,,5,6,7,8,9];
+    // var brr=[];
+    // for(var i=0;i<arr.length;i++){
+    // 	if (arr[i]!==undefined) {
+    // 		brr[brr.length]=arr[i];
+    // 	}
+    // }
+    // console.log(brr);
+    // 数组求最大值、最小值、平均值
+    var arr=[1,2,3,4,5,6,7,8,9];
+    var max=arr[0];
+    var min=arr[0];
+    var str=0;
+    var avg;
+    var sum=arr.length;
+    for(var i=0;i<sum;i++){
+    	if (max<arr[i]) {
+    		max=arr[i];
+    	}else if (min>arr[i]) {
+    		min=arr[i];
+    	}
+    	str+=arr[i];
+    }
+    avg=str/sum;
+    // console.log(`最大值为：${max};  最小值：${min};  平均值：${avg}`);
+    // 数组排序
+    // 从小到大
+    // var arr=[1,5,88,8,9,32,75,65];
+    // for(var i=0;i<arr.length;i++){
+    // 	for(var j=0;j<arr.length;j++){
+    // 		if(arr[j]>arr[j+1]){
+    // 			var brr=arr[j];
+    // 			arr[j]=arr[j+1];
+    // 			arr[j+1]=brr;
+    // 		}
+    // 	}
+    // }
+    // console.log(arr);
+    //从大到小
+    // var arr=[1,5,88,8,9,32,75,65];
+    // for(var i=0;i<arr.length;i++){
+    // 	for(var j=0;j<arr.length;j++){
+    // 		if(arr[j]<arr[j+1]){
+    // 			var brr=arr[j];
+    // 			arr[j]=arr[j+1];
+    // 			arr[j+1]=brr;
+    // 		}
+    // 	}
+    // }
+    // console.log(arr);
+    // 筛选数据类型
+    // var arr=[1,2,3,5,,'张三','李四',true,false];
+    // for(var i=0;i<arr.length;i++){
+    // 	if (typeof arr[i]=="number") {
+    // 		console.log(`这是number类型${arr[i]}`);
+    // 	}else if (typeof arr[i]=="string") {
+    // 		console.log(`这是string类型${arr[i]}`);
+    // 	}else if(typeof arr[i]=="boolean"){
+    // 		console.log(`这是boolean类型${arr[i]}`);
+    // 	}else if (typeof arr[i]=="undefined") {
+    // 		console.log(`这是undefined类型${arr[i]}`);
+    // 	}else if (typeof arr[i]=="null") {
+    // 		console.log(`这是null类型${arr[i]}`);
+    // 	}
+    // }
+    // 筛选数组中大于0的数
+    // var arr=[-1,-5,30,87,0,31];
+    // for(var i=0;i<arr.length;i++){
+    // 	if (arr[i]>"0") {
+    // 		console.log(arr[i]);
+    // 	}
+    // }
+    // 将数组元素扩大至2倍
+    // var arr=[10,20,30,40,50,60,70,80,90,100];
+    // for(var i=0;i<arr.length;i++){
+    // 	arr[i]*=2;
+    // }
+    // console.log(arr);
+    // 反向输出数组中的各个元素
+    // var arr=[10,20,30,40,50,60,70,80,90,100];
+    // var brr=[];
+    // for(var i=arr.length-1;i>=0;i--){
+    // 	brr.push(arr[i]);
+    // 	brr[brr.length]=arr[i];
+    // }
+    // console.log(brr);
+    // 数组合并
+    // var arr=['张三',1,2,3];
+    // var brr=['李四',4,5,6];
+    // for(var i=0;i<arr.length;i++){
+    // 	brr.push(arr[i]);
+    // }
+    // console.log(brr);
+    //
+    // var arr = ['张三', 1, 2, 3];
+    // var brr = ['李四', 4, 5, 6, 7, 8, 9];
+    // for (var i = 0; i < brr.length; i++) {
+    //     arr[arr.length] = brr[i];
+    // }
+    // console.log(arr);
+</script>
